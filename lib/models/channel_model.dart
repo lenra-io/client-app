@@ -23,9 +23,11 @@ class ChannelModel extends ChangeNotifier {
   }
 
   void createChannel(String appName) {
+    print("CREATING CHANNEL");
     channel = socketModel.channel("app", {"app": appName});
 
     channel!.onError((response) {
+      print("ONERROR $response");
       hasError = true;
       isInitialized = true;
       errors = ApiErrors.fromJson(response!["reason"]);

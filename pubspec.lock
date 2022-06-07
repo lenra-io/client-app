@@ -76,7 +76,7 @@ packages:
     description:
       path: "."
       ref: beta
-      resolved-ref: "52fcb7e649f87fd36215afe18f0ae0aecddc6563"
+      resolved-ref: "5be8004033a117a2bbf90b54ffb18f2ef114e2b7"
       url: "git@github.com:lenra-io/client-common.git"
     source: git
     version: "1.0.0"

@@ -14,8 +14,9 @@ import 'package:provider/provider.dart';
 
 class LenraUiController extends StatefulWidget {
   final String accessToken;
+  final String appName;
 
-  const LenraUiController({Key? key, required this.accessToken}) : super(key: key);
+  const LenraUiController({Key? key, required this.accessToken, required this.appName}) : super(key: key);
 
   @override
   State<LenraUiController> createState() {
@@ -51,6 +52,9 @@ class _LenraUiControllerState extends State<LenraUiController> {
         ),
       ],
       builder: (BuildContext context, _) {
+        context.read<ChannelModel>().createChannel(widget.appName);
+        (context.read<WidgetModel>() as ClientWidgetModel).setupListeners();
+
         ChannelModel channelModel = context.watch<ChannelModel>();
         Widget res;
         if (channelModel.hasError) {
