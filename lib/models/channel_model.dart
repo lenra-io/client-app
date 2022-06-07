@@ -42,6 +42,7 @@ class ChannelModel extends ChangeNotifier {
   }
 
   bool handleNotifications(Event notification) {
+    print("HANDLING NOTIFICATION $notification");
     channel!.send('run', notification.toMap());
     return true;
   }
