@@ -1,16 +1,15 @@
+import 'package:client_app/app.dart';
 import 'package:client_app/lenra_ui_controller.dart';
-import 'package:client_app/models/channel_model.dart';
 import 'package:client_common/test/lenra_page_test_help.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:provider/provider.dart';
 
 void main() {
   testWidgets('LenraUiController simple instantiation', (WidgetTester tester) async {
     await tester.runAsync(
       () => tester.pumpWidget(
         createAppTestWidgets(
-          const LenraUiController(
+          const App(
             accessToken: "random-access-token",
             appName: "app-name",
           ),
