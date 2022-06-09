@@ -76,7 +76,7 @@ packages:
     description:
       path: "."
       ref: beta
-      resolved-ref: f2d4bb2716a2d24c8cafd8e314b75d144ba7f71c
+      resolved-ref: "5be8004033a117a2bbf90b54ffb18f2ef114e2b7"
       url: "git@github.com:lenra-io/client-common.git"
     source: git
     version: "1.0.0"
@@ -226,7 +226,7 @@ packages:
     source: git
     version: "0.0.0"
   lenra_ui_runner:
-    dependency: transitive
+    dependency: "direct main"
     description:
       path: "."
       ref: "v1.0.0-beta.75"
@@ -305,14 +305,14 @@ packages:
     source: hosted
     version: "1.8.1"
   phoenix_wings:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: phoenix_wings
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
   provider:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: provider
       url: "https://pub.dartlang.org"

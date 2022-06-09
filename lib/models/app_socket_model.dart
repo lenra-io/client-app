@@ -19,7 +19,7 @@ class AppSocketModel extends SocketModel {
 
     _socket = createPhoenixSocket(
       Config.instance.wsEndpoint,
-      {"token": accessToken!},
+      {"token": accessToken},
     );
     _socket?.connect();
   }
