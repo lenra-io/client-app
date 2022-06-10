@@ -22,7 +22,6 @@ class LenraChannel {
   }
 
   void onUi(void Function(Map<dynamic, dynamic>) callback) {
-    print("LENRA CHANNEL ON UI");
     _channel.on("ui", (payload, ref, joinRef) {
       if (payload == null) return;
       callback(payload);
