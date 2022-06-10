@@ -1,3 +1,4 @@
+import 'package:client_app/app.dart';
 import 'package:client_app/lenra_ui_controller.dart';
 import 'package:client_common/test/lenra_page_test_help.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,7 @@ void main() {
     await tester.runAsync(
       () => tester.pumpWidget(
         createAppTestWidgets(
-          const LenraUiController(
+          const App(
             accessToken: "random-access-token",
             appName: "app-name",
           ),

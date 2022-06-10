@@ -8,9 +8,7 @@ class ClientWidgetModel extends WidgetModel<ApiErrors> {
   ClientWidgetModel({required this.channelModel});
 
   void setupListeners() {
-    print("SETTING UP LISTENERS");
     channelModel.channel!.onUi((Map<dynamic, dynamic>? ui) {
-      print("ONUI $ui");
       if (ui == null) return;
 
       if (!channelModel.isInitialized) {
