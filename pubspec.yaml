@@ -1,7 +1,7 @@
 name: client_app
 description: Lenra's client app project.
 
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
