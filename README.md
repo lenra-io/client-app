@@ -1,16 +1,18 @@
-# client_app
+# Lenra Client App
 
-A new Flutter project.
+The Lenra Client App in Flutter.
+
+### Requirements
+- [flutter](https://flutter.dev/docs/get-started/install)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Run flutter test
+```sh
+flutter test
+```
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Run flutter test with coverage report (need to install lcov)
+```sh
+flutter test --coverage && lcov --list coverage/lcov.info
+```
