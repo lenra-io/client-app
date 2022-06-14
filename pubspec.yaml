@@ -1,13 +1,9 @@
 name: client_app
 description: Lenra's client app project.
-
 publish_to: "none"
-
 version: 1.0.0+1
-
 environment:
   sdk: ">=2.17.1 <3.0.0"
-
 dependencies:
   flutter:
     sdk: flutter
@@ -15,18 +11,16 @@ dependencies:
   client_common:
     git:
       url: git@github.com:lenra-io/client-common.git
-      ref: v1.0.0-beta.1
+      ref: v1.0.0-beta.2
   lenra_ui_runner:
     git:
       url: git@github.com:lenra-io/lenra_ui_runner.git
       ref: v1.0.0-beta.75
   provider: ^6.0.1
   phoenix_wings: ^1.0.2
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
-
 flutter:
   uses-material-design: true
