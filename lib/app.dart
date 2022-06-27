@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:lenra_ui_runner/widget_model.dart';
 import 'package:provider/provider.dart';
 
+import 'models/context_model.dart';
+
 class App extends StatefulWidget {
   final String appName;
 
@@ -27,11 +29,12 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProxyProvider<SocketModel, ChannelModel>(
-          create: (context) => ChannelModel(socketModel: context.read<SocketModel>()),
-          update: (_, socketModel, channelModel) {
+        ChangeNotifierProxyProvider2<SocketModel, ContextModel, ChannelModel>(
+          create: (context) =>
+              ChannelModel(socketModel: context.read<SocketModel>(), contextModel: context.read<ContextModel>()),
+          update: (_, socketModel, contextModel, channelModel) {
             if (channelModel == null) {
-              return ChannelModel(socketModel: socketModel);
+              return ChannelModel(socketModel: socketModel, contextModel: contextModel);
             }
             return channelModel.update(socketModel);
           },
@@ -42,9 +45,12 @@ class _AppState extends State<App> {
         ),
       ],
       builder: (BuildContext context, _) {
-        context.read<ChannelModel>().createChannel(widget.appName);
-        (context.read<WidgetModel>() as ClientWidgetModel).setupListeners();
-
+        WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+          context.read<ContextModel>().mediaQueryData = MediaQuery.of(context);
+          //The model calls are in the postframe callback because the mediaquerydata is not set until the first frame
+          context.read<ChannelModel>().createChannel(widget.appName);
+          (context.read<WidgetModel>() as ClientWidgetModel).setupListeners();
+        });
         return const LenraUiController();
       },
     );
