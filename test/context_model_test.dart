@@ -9,7 +9,7 @@ import 'package:provider/provider.dart';
 
 void main() {
   testWidgets('Context model send JSON', (WidgetTester tester) async {
-    late BuildContext _context;
+    late BuildContext contextLocal;
     await tester.pumpWidget(
       MultiProvider(
         providers: [
@@ -21,7 +21,7 @@ void main() {
             child: Scaffold(
               body: StatefulBuilder(
                 builder: (context, setState) {
-                  _context = context;
+                  contextLocal = context;
 
                   return Container();
                 },
@@ -32,9 +32,9 @@ void main() {
       ),
     );
     await tester.pump();
-    _context.read<ContextModel>().mediaQueryData = MediaQuery.of(_context);
+    contextLocal.read<ContextModel>().mediaQueryData = MediaQuery.of(contextLocal);
     await tester.pump();
-    var contextModel = _context.read<ContextModel>();
+    var contextModel = contextLocal.read<ContextModel>();
     var contextJSON = contextModel.toJson();
     expect(contextJSON, {
       'screenSize': {'width': 800.0, 'height': 600.0}
