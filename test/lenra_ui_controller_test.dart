@@ -12,17 +12,11 @@ void main() {
     await tester.runAsync(
       () => tester.pumpWidget(
         createAppTestWidgets(
-          MultiProvider(
-            providers: [
-              ChangeNotifierProvider<SocketModel>(
-                create: (context) => AppSocketModel("random-access-token"),
-              ),
-            ],
-            builder: (BuildContext context, _) {
-              return const App(
-                appName: "app-name",
-              );
-            },
+          ChangeNotifierProvider<SocketModel>(
+            create: (context) => AppSocketModel("random-access-token"),
+            child: const App(
+              appName: "app-name",
+            ),
           ),
         ),
       ),
