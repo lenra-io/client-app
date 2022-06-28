@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:lenra_ui_runner/widget_model.dart';
 import 'package:provider/provider.dart';
 
-import 'models/context_model.dart';
+import 'package:client-app/models/context_model.dart';
 
 class App extends StatefulWidget {
   final String appName;
