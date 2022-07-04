@@ -1,5 +1,4 @@
 import 'package:client_app/lenra_ui_controller.dart';
-import 'package:client_app/models/app_socket_model.dart';
 import 'package:client_app/models/channel_model.dart';
 import 'package:client_app/models/client_widget_model.dart';
 import 'package:client_app/models/socket_model.dart';
@@ -8,10 +7,9 @@ import 'package:lenra_ui_runner/widget_model.dart';
 import 'package:provider/provider.dart';
 
 class App extends StatefulWidget {
-  final String accessToken;
   final String appName;
 
-  const App({Key? key, required this.accessToken, required this.appName}) : super(key: key);
+  const App({Key? key, required this.appName}) : super(key: key);
 
   @override
   State<App> createState() {
@@ -29,9 +27,6 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider<SocketModel>(
-          create: (context) => AppSocketModel(widget.accessToken),
-        ),
         ChangeNotifierProxyProvider<SocketModel, ChannelModel>(
           create: (context) => ChannelModel(socketModel: context.read<SocketModel>()),
           update: (_, socketModel, channelModel) {
