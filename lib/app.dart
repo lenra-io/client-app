@@ -28,6 +28,7 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider<ContextModel>(create: (context) => ContextModel()),
         ChangeNotifierProxyProvider2<SocketModel, ContextModel, ChannelModel>(
           create: (context) =>
               ChannelModel(socketModel: context.read<SocketModel>(), contextModel: context.read<ContextModel>()),
