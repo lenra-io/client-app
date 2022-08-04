@@ -11,11 +11,11 @@ dependencies:
   client_common:
     git:
       url: git@github.com:lenra-io/client-common.git
-      ref: v1.0.0-beta.4
+      ref: v1.0.0-beta.7
   lenra_ui_runner:
     git:
       url: git@github.com:lenra-io/lenra_ui_runner.git
-      ref: v1.0.0-beta.75
+      ref: v1.0.0-beta.78
   provider: ^6.0.1
   phoenix_wings: ^1.0.2
 dev_dependencies:
