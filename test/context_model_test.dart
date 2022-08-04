@@ -31,7 +31,6 @@ void main() {
         ),
       ),
     );
-    await tester.pump();
     contextLocal.read<ContextModel>().mediaQueryData = MediaQuery.of(contextLocal);
     await tester.pump();
     var contextModel = contextLocal.read<ContextModel>();
