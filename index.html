@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="made with love by dartdoc 5.1.0-dev">
+  <meta name="description" content="client_app API docs, for the Dart programming language.">
+  <title>client_app - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href=""
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li class="self-crumb">client_app package</li>
+  </ol>
+  <div class="self-name">client_app</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <div id="top"></div>
+<!--
+*** This README was created with https://github.com/othneildrew/Best-README-Template
+--><!-- PROJECT SHIELDS -->
+<p><a href="https://github.com/lenra-io/client-app/graphs/contributors"><img src="https://img.shields.io/github/contributors/lenra-io/client-app.svg?style=for-the-badge" alt="Contributors"></a>
+<a href="https://github.com/lenra-io/client-app/network/members"><img src="https://img.shields.io/github/forks/lenra-io/client-app.svg?style=for-the-badge" alt="Forks"></a>
+<a href="https://github.com/lenra-io/client-app/stargazers"><img src="https://img.shields.io/github/stars/lenra-io/client-app.svg?style=for-the-badge" alt="Stargazers"></a>
+<a href="https://github.com/lenra-io/client-app/issues"><img src="https://img.shields.io/github/issues/lenra-io/client-app.svg?style=for-the-badge" alt="Issues"></a>
+<a href="https://github.com/lenra-io/client-app/blob/master/LICENSE"><img src="https://img.shields.io/github/license/lenra-io/client-app.svg?style=for-the-badge" alt="MIT License"></a></p><!-- PROJECT LOGO --><br>
+<div align="center">
+<p></p><h3 align="center">Lenra Client App</h3><p></p><p align="center">
+The Lenra Client App in Flutter.
+<br>
+<br>
+<a href="https://github.com/lenra-io/client-app/issues">Report Bug</a>
+·
+<a href="https://github.com/lenra-io/client-app/issues">Request Feature</a>
+</p>
+</div><div style="text-align: justify">
+This project gives you the possibility to run Lenra apps by only providing a <a href="https://github.com/mfeckie/phoenix_wings">Phoenix websocket</a> and an application name.
+</div><!-- GETTING STARTED -->
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li><a href="https://flutter.dev/docs/get-started/install">flutter</a></li>
+</ul><p align="right">(<a href="#top">back to top</a>)</p><!-- USAGE EXAMPLES -->
+<h2 id="usage">Usage</h2>
+<p>This library needs a <code>SocketModel</code> and an application name to run properly.</p>
+<p>A minimal running example of integration into a project can be represented as :</p>
+<pre class="language-dart"><code class="language-dart">ChangeNotifierProvider&lt;SocketModel&gt;(
+    create: (context) =&gt; AppSocketModel("arbitrary-access-token"),
+    child: const App(
+        appName: "app-name",
+    ),
+);
+</code></pre>
+<p>As you can see in this example, an arbitrary access token has been defined because the authentication to the websocket has not been handled.</p>
+<p>If your socket requires authentication using a websocket you can follow the <code>lenra-store</code> implementation which makes use of an <code>AuthModel</code> to handle authentication combined with an <code>AppSocketModel</code> that ensures that the access token is set and can be updated anytime within the application lifecycle.</p>
+<h3 id="running-tests">Running tests</h3>
+<p>Run flutter test</p>
+<pre class="language-sh"><code class="language-sh">flutter test
+</code></pre>
+<p>Run flutter test with coverage report (need to install lcov)</p>
+<pre class="language-sh"><code class="language-sh">flutter test --coverage &amp;&amp; lcov --list coverage/lcov.info
+</code></pre><p align="right">(<a href="#top">back to top</a>)</p><!-- CONTRIBUTING -->
+<h2 id="contributing">Contributing</h2>
+<p>Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are <strong>greatly appreciated</strong>.</p>
+<p>If you have a suggestion that would make this better, please open an issue with the tag "enhancement".
+Don't forget to give the project a star if you liked it! Thanks again!</p><p align="right">(<a href="#top">back to top</a>)</p><!-- LICENSE -->
+<h2 id="license">License</h2>
+<p>Distributed under the <strong>MIT</strong> License. See <a href="./LICENSE">LICENSE</a> for more information.</p><p align="right">(<a href="#top">back to top</a>)</p><!-- CONTACT -->
+<h2 id="contact">Contact</h2>
+<p>Lenra - <a href="https://twitter.com/lenra_dev">@lenra_dev</a> - contact@lenra.io</p>
+<p>Project Link: <a href="https://github.com/lenra-io/client-app">https://github.com/lenra-io/client-app</a></p><p align="right">(<a href="#top">back to top</a>)</p><!-- MARKDOWN LINKS & IMAGES --><!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="app">
+  <span class="name"><a href="file-___home_runner_work_client-app_client-app_lib_app/file-___home_runner_work_client-app_client-app_lib_app-library.html">app</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="app_socket_model">
+  <span class="name"><a href="file-___home_runner_work_client-app_client-app_lib_models_app_socket_model/file-___home_runner_work_client-app_client-app_lib_models_app_socket_model-library.html">app_socket_model</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="channel_model">
+  <span class="name"><a href="file-___home_runner_work_client-app_client-app_lib_models_channel_model/file-___home_runner_work_client-app_client-app_lib_models_channel_model-library.html">channel_model</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="client_widget_model">
+  <span class="name"><a href="file-___home_runner_work_client-app_client-app_lib_models_client_widget_model/file-___home_runner_work_client-app_client-app_lib_models_client_widget_model-library.html">client_widget_model</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="context_model">
+  <span class="name"><a href="file-___home_runner_work_client-app_client-app_lib_models_context_model/file-___home_runner_work_client-app_client-app_lib_models_context_model-library.html">context_model</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="lenra_ui_controller">
+  <span class="name"><a href="file-___home_runner_work_client-app_client-app_lib_lenra_ui_controller/file-___home_runner_work_client-app_client-app_lib_lenra_ui_controller-library.html">lenra_ui_controller</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="socket">
+  <span class="name"><a href="socket/socket-library.html">socket</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="socket_model">
+  <span class="name"><a href="file-___home_runner_work_client-app_client-app_lib_models_socket_model/file-___home_runner_work_client-app_client-app_lib_models_socket_model-library.html">socket_model</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li class="self-crumb">client_app package</li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">client_app</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="file-___home_runner_work_client-app_client-app_lib_app/file-___home_runner_work_client-app_client-app_lib_app-library.html">app</a></li>
+      <li><a href="file-___home_runner_work_client-app_client-app_lib_models_app_socket_model/file-___home_runner_work_client-app_client-app_lib_models_app_socket_model-library.html">app_socket_model</a></li>
+      <li><a href="file-___home_runner_work_client-app_client-app_lib_models_channel_model/file-___home_runner_work_client-app_client-app_lib_models_channel_model-library.html">channel_model</a></li>
+      <li><a href="file-___home_runner_work_client-app_client-app_lib_models_client_widget_model/file-___home_runner_work_client-app_client-app_lib_models_client_widget_model-library.html">client_widget_model</a></li>
+      <li><a href="file-___home_runner_work_client-app_client-app_lib_models_context_model/file-___home_runner_work_client-app_client-app_lib_models_context_model-library.html">context_model</a></li>
+      <li><a href="file-___home_runner_work_client-app_client-app_lib_lenra_ui_controller/file-___home_runner_work_client-app_client-app_lib_lenra_ui_controller-library.html">lenra_ui_controller</a></li>
+      <li><a href="socket/socket-library.html">socket</a></li>
+      <li><a href="file-___home_runner_work_client-app_client-app_lib_models_socket_model/file-___home_runner_work_client-app_client-app_lib_models_socket_model-library.html">socket_model</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    client_app
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/script.js?v1"></script>
+
+
+
+</body>
+
+</html>
+
